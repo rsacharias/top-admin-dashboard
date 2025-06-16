@@ -45,3 +45,38 @@ h3 {
 }
 
 /* end of reset */
+
+ul,
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 75%;
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.side-bar {
+  display: grid;
+  align-content: start;
+  gap: 30px;
+}
+
+header {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 2fr 1fr;
+}
+
+.header-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
