@@ -98,10 +98,15 @@ button {
 .sidebar {
   background-color: var(--bg-sidebar);
   color: var(--text-clr-2);
+  font-weight: 800;
   padding: 20px 30px;
   display: grid;
   align-content: start;
   gap: 50px;
+}
+
+.sidebar h1 {
+  font-size: 1.9rem;
 }
 
 .sidebar li+li {
@@ -111,12 +116,12 @@ button {
 .sidebar-header,
 .sidebar-item {
   display: grid;
-  grid-template-columns: 32px min-content;
+  grid-template-columns: 48px min-content;
   gap: 12px;
+  place-items: center;
 }
 
 .item-logo {
-  place-self: center;
   /* see https://stackoverflow.com/questions/22252472/how-can-i-change-the-color-of-an-svg-element */
   /* and https://codepen.io/sosuke/pen/Pjoqqp */
   filter: invert(95%) sepia(7%) saturate(385%) hue-rotate(169deg) brightness(100%) contrast(96%);
