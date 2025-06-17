@@ -46,6 +46,31 @@ h3 {
 
 /* end of reset */
 
+:root {
+  --primary-color-1: #fff;
+  --primary-color-2: #e2e8f0;
+  --primary-color-3: #1992d4;
+
+  --secondary-color-1: #101010;
+  --secondary-color-2: #e5f2f9;
+  --secondary-color-3: #636363;
+  --accent-color-1: #f0b429;
+
+  --bg-body: #111;
+  --bg-content: var(--primary-color-2);
+  --bg-header: var(--primary-color-1);
+  --bg-cards: var(--primary-color-1);
+  --bg-sidebar: var(--primary-color-3);
+
+  --bg-buttons: var(--primary-color-3);
+  --bg-input: var(--primary-color-2);
+
+  --text-clr-1: var(--secondary-color-1);
+  --text-clr-2: var(--secondary-color-2);
+  --text-clr-3: var(--secondary-color-3);
+
+}
+
 ul,
 li {
   list-style: none;
