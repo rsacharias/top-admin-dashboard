@@ -78,6 +78,7 @@ body {
 ul,
 li {
   list-style: none;
+  padding: 0;
 }
 
 button {
@@ -85,7 +86,6 @@ button {
   color: var(--text-clr-2);
   border: none;
 }
-
 
 .container {
   max-width: 75%;
@@ -95,12 +95,31 @@ button {
   grid-template-columns: 1fr 4fr;
 }
 
-.side-bar {
+.sidebar {
   background-color: var(--bg-sidebar);
   color: var(--text-clr-2);
+  padding: 20px 30px;
   display: grid;
   align-content: start;
-  gap: 30px;
+  gap: 50px;
+}
+
+.sidebar li+li {
+  margin-top: 15px;
+}
+
+.sidebar-header,
+.sidebar-item {
+  display: grid;
+  grid-template-columns: 32px min-content;
+  gap: 12px;
+}
+
+.item-logo {
+  place-self: center;
+  /* see https://stackoverflow.com/questions/22252472/how-can-i-change-the-color-of-an-svg-element */
+  /* and https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(95%) sepia(7%) saturate(385%) hue-rotate(169deg) brightness(100%) contrast(96%);
 }
 
 header {
