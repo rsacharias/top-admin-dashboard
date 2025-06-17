@@ -83,6 +83,12 @@ header {
   grid-template-columns: 3fr 1fr;
 }
 
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
 .side-content {
   display: grid;
   gap: 30px;
