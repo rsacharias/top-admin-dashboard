@@ -77,7 +77,8 @@ h3 {
 
   --text-clr-1: var(--secondary-color-1);
   --text-clr-2: var(--secondary-color-2);
-  --text-clr-3: var(--secondary-color-3);
+
+  --card-text-clr: var(--secondary-color-3);
 
   --sticker-size-1: 48px;
   --sticker-size-2: 64px;
@@ -242,6 +243,8 @@ header {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 24px;
+
+  /* align-items: start; */
 }
 
 .content h2 {
@@ -257,7 +260,11 @@ header {
   box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
-.card h3 {
+.card p {
+  color: var(--card-text-clr);
+}
+
+.project-cards-container .card h3 {
   font-size: 1.05rem;
 }
 
@@ -265,6 +272,8 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
+
+  /* border: 3px solid black; */
 }
 
 .project-cards-container .card {
@@ -284,5 +293,19 @@ header {
 
 .side-content {
   display: grid;
+  align-content: space-between;
   gap: 30px;
+}
+
+.announcement-container {
+  font-size: 0.75rem;
+}
+
+.announcement {
+  padding: 0px 5px 15px;
+}
+
+.announcement:not(:last-child) {
+  border-bottom: 1px solid var(--bg-content);
+  margin-bottom: 18px;
 }
