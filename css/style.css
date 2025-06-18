@@ -219,7 +219,7 @@ header {
 }
 
 .greeting .name {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .sticker.penguin-hello {
@@ -238,18 +238,48 @@ header {
 }
 
 .content {
+  padding: 24px 28px 21px 21px;
   display: grid;
   grid-template-columns: 3fr 1fr;
+  gap: 24px;
 }
 
-.project-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+.content h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
 .card {
+  padding: 20px;
+  border-radius: 8px;
   background-color: var(--bg-cards);
+  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: 1.05rem;
+}
+
+.project-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.project-cards-container .card {
+  border-left: 6px solid var(--accent-color-1);
+  display: grid;
+  gap: 24px;
+  align-content: space-between;
+}
+
+.project-cards-container .card-icons {
+  --size: var(--icon-size-1);
+  display: grid;
+  grid-template-columns: repeat(3, var(--size));
+  gap: 18px;
+  place-content: end;
 }
 
 .side-content {
