@@ -54,7 +54,12 @@ h3 {
   --secondary-color-1: #101010;
   --secondary-color-2: #e5f2f9;
   --secondary-color-3: #636363;
+
   --accent-color-1: #f0b429;
+  --accent-color-2: #facc15;
+  --accent-color-3: #e0f2fe;
+  --accent-color-4: #a3a3a3;
+  --accent-color-5: #fda4af;
 
   --bg-body: #111;
   --bg-content: var(--primary-color-2);
@@ -65,9 +70,22 @@ h3 {
   --bg-buttons: var(--primary-color-3);
   --bg-input: var(--primary-color-2);
 
+  --bg-sticker-1: var(--accent-color-2);
+  --bg-sticker-2: var(--accent-color-3);
+  --bg-sticker-3: var(--accent-color-4);
+  --bg-sticker-4: var(--accent-color-5);
+
   --text-clr-1: var(--secondary-color-1);
   --text-clr-2: var(--secondary-color-2);
   --text-clr-3: var(--secondary-color-3);
+
+  --sticker-size-1: 48px;
+  --sticker-size-2: 64px;
+
+  --icon-size-1: 24px;
+  --icon-size-2: 48px;
+
+  --button-size: 100px;
 }
 
 body {
@@ -82,12 +100,18 @@ li {
 }
 
 button {
+  --size: var(--button-size);
+
+  width: var(--size);
   background-color: var(--bg-buttons);
   color: var(--text-clr-2);
   border: none;
+  border-radius: 21px;
+  padding: 5px 25px;
 }
 
 .container {
+  background-color: var(--bg-content);
   max-width: 75%;
   margin-inline: auto;
 
@@ -103,6 +127,7 @@ button {
   display: grid;
   align-content: start;
   gap: 50px;
+
 }
 
 .sidebar h1 {
@@ -121,7 +146,7 @@ button {
   place-items: center;
 }
 
-.item-logo {
+.sidebar .item-logo {
   /* see https://stackoverflow.com/questions/22252472/how-can-i-change-the-color-of-an-svg-element */
   /* and https://codepen.io/sosuke/pen/Pjoqqp */
   filter: invert(95%) sepia(7%) saturate(385%) hue-rotate(169deg) brightness(100%) contrast(96%);
@@ -129,18 +154,90 @@ button {
 
 header {
   background-color: var(--bg-header);
+  padding: 10px 40px 12px;
+  box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.1);
+
   display: grid;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-columns: 2fr 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.search {
+  --size: var(--icon-size-1);
+
+  margin-right: var(--size);
+  display: grid;
+  grid-template-columns: var(--size) auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.search input[type="search"] {
+  --size: var(--icon-size-1);
+
+  appearance: none;
+  height: calc(var(--size) + 4px);
+  background-color: var(--bg-content);
+  border: none;
+  border-radius: 12px;
+}
+
+.top-right {
+  padding-right: 20px;
+  display: grid;
+  grid-template-columns: var(--icon-size-1) var(--sticker-size-1) max-content;
+  align-items: center;
+  justify-content: end;
+  gap: 24px;
+}
+
+.sticker.penguin-photographer {
+  --size: var(--sticker-size-1);
+  height: var(--size);
+  width: var(--size);
+  background: var(--bg-sticker-1) url("../img/penguin-photograph.svg");
+  border-radius: 50%;
+}
+
+.top-right .name {
+  font-weight: bold;
+}
+
+.greeting {
+  display: grid;
+  grid-template-columns: var(--sticker-size-2) max-content;
+  gap: 12px;
+  align-items: center;
+}
+
+.greeting-text>.hello {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: -4px;
+}
+
+.greeting .name {
+  font-size: 1.25rem;
+}
+
+.sticker.penguin-hello {
+  --size: var(--sticker-size-2);
+  height: var(--size);
+  width: var(--size);
+  background: var(--bg-sticker-1) url("../img/penguin-hello.svg");
+  border-radius: 50%;
 }
 
 .header-nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-self: end;
+  gap: 12px;
 }
 
 .content {
-  background-color: var(--bg-content);
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
