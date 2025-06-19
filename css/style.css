@@ -245,7 +245,7 @@ header {
   box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
-.card p {
+.card .text {
   color: var(--card-text-clr);
 }
 
@@ -307,6 +307,10 @@ header {
 
 .see-also+div {
   margin-top: 18px;
+}
+
+.see-also .at {
+  font-weight: 600;
 }
 
 
