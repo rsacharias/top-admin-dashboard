@@ -70,10 +70,11 @@ h3 {
   --bg-buttons: var(--primary-color-3);
   --bg-input: var(--primary-color-2);
 
-  --bg-sticker-1: var(--accent-color-2);
-  --bg-sticker-2: var(--accent-color-3);
-  --bg-sticker-3: var(--accent-color-4);
-  --bg-sticker-4: var(--accent-color-5);
+  --bg-sticker-1: var(--accent-color-1);
+  --bg-sticker-2: var(--accent-color-2);
+  --bg-sticker-3: var(--accent-color-3);
+  --bg-sticker-4: var(--accent-color-4);
+  --bg-sticker-5: var(--accent-color-5);
 
   --text-clr-1: var(--secondary-color-1);
   --text-clr-2: var(--secondary-color-2);
@@ -194,14 +195,6 @@ header {
   gap: 24px;
 }
 
-.sticker.penguin-photographer {
-  --size: var(--sticker-size-1);
-  height: var(--size);
-  width: var(--size);
-  background: var(--bg-sticker-1) url("../img/penguin-photograph.svg");
-  border-radius: 50%;
-}
-
 .top-right .name {
   font-weight: bold;
 }
@@ -221,14 +214,6 @@ header {
 
 .greeting .name {
   font-size: 1.5rem;
-}
-
-.sticker.penguin-hello {
-  --size: var(--sticker-size-2);
-  height: var(--size);
-  width: var(--size);
-  background: var(--bg-sticker-1) url("../img/penguin-hello.svg");
-  border-radius: 50%;
 }
 
 .header-nav {
@@ -308,4 +293,59 @@ header {
 .announcement:not(:last-child) {
   border-bottom: 1px solid var(--bg-content);
   margin-bottom: 18px;
+}
+
+.trending .card {
+  font-size: 0.8rem;
+}
+
+.trending .see-also {
+  display: grid;
+  grid-template-columns: var(--sticker-size-1) 1fr;
+  gap: 12px;
+}
+
+.see-also+div {
+  margin-top: 18px;
+}
+
+
+/* sticker styles */
+
+.sticker {
+  height: var(--size);
+  width: var(--size);
+  border-radius: 50%;
+}
+
+.sticker.medium {
+  --size: var(--sticker-size-2);
+}
+
+.sticker.small {
+  --size: var(--sticker-size-1);
+}
+
+.sticker.penguin-hello {
+  background: var(--bg-sticker-1) url("../img/penguin-hello.svg");
+}
+
+.sticker.penguin-photographer {
+  background: var(--bg-sticker-2) url("../img/penguin-photograph.svg");
+}
+
+.sticker.penguin-cake {
+  background: var(--bg-sticker-3) url("../img/penguin-cake.svg");
+}
+
+.sticker.penguin-fishes {
+  background: var(--bg-sticker-1) url("../img/penguin-fishes.svg");
+}
+
+.sticker.penguin-mobile {
+  background: var(--bg-sticker-4) url("../img/penguin-mobile.svg");
+}
+
+.sticker.penguin-photographer {
+  background: var(--bg-sticker-5) url("../img/penguin-photograph.svg");
 }
