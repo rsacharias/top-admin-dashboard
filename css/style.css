@@ -224,12 +224,12 @@ header {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 24px;
-}
 
-.content h2 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 8px;
+  & h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
 }
 
 .card {
@@ -237,61 +237,53 @@ header {
   border-radius: 8px;
   background-color: var(--bg-cards);
   box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.1);
+
+  & .text {
+    color: var(--card-text-clr);
+  }
 }
-
-.card .text {
-  color: var(--card-text-clr);
-}
-
-.project-cards-container .card {
-  font-size: 0.70rem;
-}
-
-.project-cards-container .card h3 {
-  font-size: 1.15rem;
-}
-
-.project-cards-container p {
-  --base: var(--line-height);
-
-  position: relative;
-  font-size: calc(1em * var(--base));
-  height: calc(4em * var(--base));
-  overflow: hidden;
-}
-
-.project-cards-container p:after {
-  content: "";
-  background-image: linear-gradient(to right, transparent, var(--bg-cards) 90%);
-  position: absolute;
-  inset-inline-end: 0;
-  inset-block-end: 0;
-
-  height: calc(1em * var(--base) + 1px);
-  width: 100%;
-}
-
 
 .project-cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
-}
 
+  & .card {
+    font-size: 0.69rem;
+    border-left: 6px solid var(--accent-color-1);
 
-.project-cards-container .card {
-  border-left: 6px solid var(--accent-color-1);
-  display: grid;
-  gap: 24px;
-  align-content: space-between;
-}
+    & h3 {
+      font-size: 1.15rem;
+    }
 
-.project-cards-container .card-icons {
-  --size: var(--icon-size-1);
-  display: grid;
-  grid-template-columns: repeat(3, var(--size));
-  gap: 18px;
-  place-content: end;
+    & p {
+      --base: var(--line-height);
+
+      position: relative;
+      font-size: calc(1em * var(--base));
+      margin-bottom: 24px;
+      height: calc(4em * var(--base));
+      overflow: hidden;
+    }
+
+    & p:after {
+      content: "";
+      background-image: linear-gradient(to right, transparent, var(--bg-cards) 90%);
+      position: absolute;
+      inset-inline-end: 0;
+      inset-block-end: 0;
+      height: calc(1em * var(--base) + 1px);
+      width: 100%;
+    }
+
+    & .card-icons {
+      display: grid;
+      grid-template-columns: repeat(3, var(--icon-size-1));
+      gap: 18px;
+      place-content: end;
+
+    }
+  }
 }
 
 .side-content {
