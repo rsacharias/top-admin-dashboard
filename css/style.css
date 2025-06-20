@@ -125,7 +125,7 @@ button {
   background-color: var(--bg-sidebar);
   color: var(--text-clr-2);
   font-weight: 800;
-  padding: 20px 30px;
+  padding: 15px 30px;
   display: grid;
   align-content: start;
   gap: 50px;
@@ -155,13 +155,13 @@ button {
 
 header {
   background-color: var(--bg-header);
-  padding: 10px 40px 12px;
+  padding: 5px 40px 12px;
   box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.1);
 
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 2fr 1fr;
-  gap: 18px;
+  gap: 8px;
   align-items: center;
 }
 
@@ -170,19 +170,17 @@ header {
 
   margin-right: var(--size);
   display: grid;
-  grid-template-columns: var(--size) auto;
+  grid-template-columns: var(--size) 1fr;
   align-items: center;
   gap: 12px;
-}
 
-.search input[type="search"] {
-  --size: var(--icon-size-1);
-
-  appearance: none;
-  height: calc(var(--size) + 4px);
-  background-color: var(--bg-content);
-  border: none;
-  border-radius: 12px;
+  & input[type="search"] {
+    appearance: none;
+    height: calc(var(--size) + 4px);
+    background-color: var(--bg-content);
+    border: none;
+    border-radius: 12px;
+  }
 }
 
 .top-right {
@@ -192,33 +190,32 @@ header {
   align-items: center;
   justify-content: end;
   gap: 24px;
-}
 
-.top-right .name {
-  font-weight: bold;
+  & .name {
+    font-weight: bold;
+  }
 }
 
 .greeting {
   display: grid;
-  grid-template-columns: var(--sticker-size-2) max-content;
-  gap: 12px;
+  grid-template-columns: var(--sticker-size-2) 1fr;
   align-items: center;
-}
+  gap: 12px;
 
-.greeting-text>.hello {
-  font-size: 0.8rem;
-  font-weight: bold;
-  margin-bottom: -4px;
-}
+  & .hello {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: -4px;
+  }
 
-.greeting .name {
-  font-size: 1.5rem;
+  & .name {
+    font-size: 1.5rem;
+  }
 }
 
 .header-nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-self: end;
   gap: 12px;
 }
 
@@ -227,8 +224,6 @@ header {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 24px;
-
-  /* align-items: start; */
 }
 
 .content h2 {
