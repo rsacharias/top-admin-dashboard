@@ -305,35 +305,34 @@ header {
 
 .announcement-container {
   font-size: 0.75rem;
-}
 
-.announcement {
-  padding: 0px 5px 15px;
-}
+  & .announcement {
+    padding: 0px 5px 15px;
+  }
 
-.announcement:not(:last-child) {
-  border-bottom: 1px solid var(--bg-content);
-  margin-bottom: 18px;
+  & .announcement:not(:last-child) {
+    border-bottom: 1px solid var(--bg-content);
+    margin-bottom: 18px;
+  }
 }
 
 .trending .card {
   font-size: 0.8rem;
-}
 
-.trending .see-also {
-  display: grid;
-  grid-template-columns: var(--sticker-size-1) 1fr;
-  gap: 12px;
-}
+  & .see-also {
+    display: grid;
+    grid-template-columns: var(--sticker-size-1) 1fr;
+    gap: 12px;
+  }
 
-.see-also+div {
-  margin-top: 18px;
-}
+  & .see-also+div {
+    margin-top: 18px;
 
-.see-also .at {
-  font-weight: 600;
+    & .at {
+      font-weight: 600;
+    }
+  }
 }
-
 
 /* sticker styles */
 
