@@ -81,7 +81,6 @@ h3 {
 
   --text-clr-1: var(--secondary-color-1);
   --text-clr-2: var(--secondary-color-2);
-
   --card-text-clr: var(--secondary-color-3);
 
   --sticker-size-1: 48px;
@@ -105,9 +104,7 @@ li {
 }
 
 button {
-  --size: var(--button-size);
-
-  width: var(--size);
+  width: var(--button-size);
   background-color: var(--bg-buttons);
   color: var(--text-clr-2);
   border: none;
@@ -145,7 +142,7 @@ button {
 .sidebar-header,
 .sidebar-item {
   display: grid;
-  grid-template-columns: 48px min-content;
+  grid-template-columns: var(--icon-size-2) min-content;
   gap: 12px;
   place-items: center;
 }
@@ -284,8 +281,6 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
-
-  /* border: 3px solid black; */
 }
 
 
